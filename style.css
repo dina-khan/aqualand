@@ -1,0 +1,705 @@
+/* the following code is applicable on all html pages */
+* {
+    /* the following code is a basic layout for all html pages */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    /* end */
+}
+
+/* font reference: https://www.1001freefonts.com/qaflone.font */
+@font-face {
+    font-family: Qaflone;
+    src: url(assets/home-page/fonts/Qaflone.otf);
+}
+
+/* font reference: https://www.1001fonts.com/andora-font.html */
+@font-face {
+    font-family: Andora;
+    src: url(assets/home-page/fonts/Andora.ttf);
+}
+
+/* font reference for the following two fonts: https://www.1001fonts.com/cinzel-font.html */
+@font-face{
+    font-family: Cinzel-Bold;
+    src: url(assets/home-page/fonts/CinzelDecorative-Bold.ttf);
+}
+@font-face{
+    font-family: Cinzel-Regular;
+    src: url(assets/home-page/fonts/CinzelDecorative-Regular.ttf);
+}
+
+body {
+    /* the following code helps keeping the footer at the bottom of the page, regardless of the content in between the header and footer. It has been referenced from: https://www.youtube.com/watch?v=ffb34dCmMVQ */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* end reference*/
+}
+
+
+/* Header */
+.header {
+    /* gradient color code is inspired by: https://www.w3schools.com/css/css3_gradients.asp */
+    background: linear-gradient(180deg, #132332 92%, #265986);
+    /* end reference */
+    
+    text-align: center;
+}
+
+#navigation-bar {
+    max-width: 100%;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: Qaflone;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+header figure {
+    text-align: center;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    /*to remove bullets in ul*/
+    list-style-type: none;
+}
+
+nav ul li {
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 90px;
+    margin-left: 90px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.btn {
+    text-decoration: none;
+    color: beige;
+}
+
+.btn:hover {
+    color: goldenrod;
+}
+/* End Header */
+
+
+
+/* Footer */
+footer {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    max-width: 100%;
+    padding: 20px;
+    
+    /* gradient color code is inspired by: https://www.w3schools.com/css/css3_gradients.asp */
+    background: linear-gradient(#64ADE2, #265986 8%, #132332 90%);
+    /* end reference */
+}
+
+#section-1 {
+    max-height: 25%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#section-2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.nav-footer {
+    flex: 1;
+}
+
+.nav-footer ul {
+    /*to remove bullets in ul*/
+    list-style-type: none;
+}
+
+.nav-footer ul li {
+    display: inline-block;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+#section-2 h4 {
+    margin-bottom: -20px;
+}
+
+#section-3 {
+    margin-top: 5px;
+}
+
+#section-2,
+#section-3 {
+    color: #EAE5CE;
+    font-family: Qaflone;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+#section-2 h4,
+#section-3 h4 {
+    color: #FFDDA6;
+    font-size: 13px;
+}
+
+#section-2,
+#section-3,
+#section-4 {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#section-4 {
+    margin-top: 50px;
+    padding-bottom: 5px;
+}
+
+#section-4 p {
+    color: beige;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+/* End Footer */
+/* end of code applicable on all html pages */
+
+
+
+/* Main Home Page */
+main {
+    /* the following line of code has been referenced from: https://www.youtube.com/watch?v=ffb34dCmMVQ */
+    flex-grow: 1;
+    /* end reference*/
+    
+    background: #fff;
+}
+
+
+#updates { /* updates bar below header */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #265986;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 2px;
+    width: 200%;
+}
+
+/*translation animation for updates*/
+#translateUpdates {
+    animation: moveleft 30s infinite linear;
+}
+
+@keyframes moveleft {
+    from {
+        transform: translate(1300px);
+    }
+
+    to {
+        transform: translate(-2100px);
+    }
+}
+/* end translation */
+
+
+/* animated waves */
+#ocean-waves { 
+    display: inline-block;
+    overflow: hidden;
+}
+
+#waves {
+    overflow-y: hidden;
+    animation: wavy 2s linear infinite;
+}
+
+/* translation for waves */
+@keyframes wavy {
+    50% {
+        transform: translate(-200px);
+    }
+}
+/*end translation*/
+
+
+/* theme park catch phrase */
+#introduction {
+    /* background image designed using https://www.canva.com/ */
+    background: url(assets/home-page/background/title-bg.png);
+    
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#introduction h1 {
+    line-height: normal;
+    font-family: Andora;
+    font-size: 70px;
+    
+    /* gradient font color inspired by: https://www.scaler.com/topics/text-gradient-css/ */
+    background: -webkit-linear-gradient(#132332, #265986 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* end reference */
+}
+
+
+/* image slideshow inspired by: https://www.youtube.com/watch?v=qDww4CbxtD4 */
+.slider {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 40px;
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.slider figure img {
+    float: left;
+    width: 20%;
+}
+
+@keyframes slider {
+    0% {
+        left: 0; 
+    }
+    20% { 
+        left: 0; 
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+/* end reference */
+
+
+/* rides section */
+#rides {
+    /* background image desinged using: https://www.canva.com/ */
+    background: url(assets/home-page/background/bg.png);
+    
+    margin-top: 150px;
+    overflow: hidden;
+    margin-bottom: 130px;
+}
+
+#rides-title {
+    text-align: center;
+    overflow: hidden;
+}
+
+#rides-title h1 {
+    /* background image for title designed using: https://www.canva.com/ */
+    background: url(assets/home-page/background/section-title.png);
+    
+    color: #265986;
+    font-size: 65px;
+    margin-top: 15px;
+    margin-bottom: 55px;
+    font-family: Cinzel-Bold;
+}
+
+#rides-title p,
+#rides-information h3 {
+    font-family: Cinzel-Regular;
+    margin: 15px;
+    color: #132332;
+    font-size: 20px;
+    line-height: normal;
+    overflow: hidden;
+}
+
+#rides-title a {
+    font-family: monospace;
+    color: #265986;
+    margin: 10px;
+    font-size: 13px;
+}
+
+#rides-information {
+    text-align: center;
+    overflow: hidden;
+    font-family: monospace;
+    margin: 20px;
+    margin-top: 50px;
+}
+
+#rides-information p {
+    font-size: 12px;
+}
+
+#rides-information a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+#rides-images { /* grid for rides images */
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 65px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+#rides-images div {
+    color: #2B6FA5;
+    text-align: center;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: monospace
+}
+
+#rides-images img {
+    border-radius: 20px;
+}
+
+
+/* social media links section */
+#follow-us { 
+    overflow: hidden;
+    background: linear-gradient(white 70%,#64ADE2 100%);
+}
+
+#follow-us-title {
+    /* background image designed using: https://www.canva.com/ */
+    background: url(assets/home-page/background/section-title.png);
+    padding:10px;
+    height: 80%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: 35px;
+    font-family: Cinzel-Bold;
+    line-height: normal;
+}
+
+#follow-us-title h1 {
+    display: inline-block;
+    
+    /* gradient font color inspired by: https://www.scaler.com/topics/text-gradient-css/ */
+    background: -webkit-linear-gradient(#132332, #265986 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* end reference */
+}
+
+#socials { /* grid for social media icons */
+    height: 200px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#socials div {
+    display: inline-block;
+    color: #2B6FA5;
+    text-decoration: underline;
+    text-align: center;
+    overflow: hidden;
+    font-family:serif;
+}
+/* end of code applicable to main home page */
+
+
+
+
+/* start of code applicable to rides page */
+.rides-bg{
+    background: url('./assets/rides-page/otherImages/wp.jpg'); /* Sets background image for main body*/
+    background-size: cover;
+}
+
+.description{
+    padding: 80px;
+    font-family: Lucida Sans Regular;
+}
+
+.description p{
+    font-size: 16px;
+}
+.rides-list{                /* Creates a grid with two equal parts as columns and centers content inside each column*/
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.main-title{
+    font-family: Lucida Sans Unicode;
+    font-size: 18px;
+    color: white;
+}
+
+.aquaRide{                  /* Uses flex to vertically align items adds transition to each ride container*/
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 85%;
+    max-height: 400px;
+    background-color: #23aac5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+.aquaRide:hover{            /* Applies animation on hover*/
+    transform: rotate(360deg) scale(1.1);
+}
+
+.aquaRide>img{
+    width: 100%;
+    height: 80%;
+}
+
+.aquaRide p,h3{
+    overflow: hidden;
+}
+
+.main-title white-color{
+    color: white;
+}
+
+.aquaRide>img{
+    border-radius: 50px;
+}
+
+.exp {              /* Adds glow effect to div via shadows*/
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow:
+      0 0 20px 30px #fff,
+      0 0 110px 90px #0ff;
+}
+/* end of code applicable to rides page */
+
+
+
+
+/* the following code is applicable to the tickets html page */
+.ticket-section-main {
+    margin: auto;
+    max-width: 700px;
+    padding: 40px 0;
+}
+
+.ticket-section-main .ticket-inner-content p {
+    margin-bottom: 20px;
+}
+
+.ticket-section-main .ticket-inner-content p,
+h3 {
+    display: block;
+    line-height: 24px;
+    color: #253b56;
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 0.9rem);
+}
+
+.ticket-inner-content .ticket-colored {
+    color: #0079bc;
+    cursor: pointer;
+}
+
+.ticket-inner-content .ticket-colored:hover {
+    color: #0069a2;
+}
+
+.ticket-card-main {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.ticket-card {
+    gap: 10px;
+    display: flex;
+    position: relative;
+    border-radius: 8px;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: center;
+    border: 2px solid #eeeeee;
+    background: rgb(255, 255, 255);
+}
+
+.ticket-card .ticket-left {
+    padding: 40px 0px 40px 40px;
+    border-right: 1px solid #eeeeee;
+}
+
+.ticket-card .ticket-left .card-title {
+    color: #253b56;
+    line-height: 25px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: clamp(1.5rem, 0.0625rem + 3vw, 1.75rem);
+}
+
+.ticket-card .ticket-left p {
+    color: #253b56;
+    font-weight: 400;
+    margin: 15px 0;
+    line-height: 25px;
+    font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+}
+
+.ticket-card .ticket-left ul {
+    margin: 0 30px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: clamp(0.8125rem, 0.6563rem + 0.5vw, 0.8rem);
+}
+
+.ticket-card .ticket-left .ticket-link {
+    border: none;
+    /* margin: 0 20px; */
+    color: #0069a2;
+    cursor: pointer;
+    font-weight: 400;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-size: clamp(0.8125rem, 0.7344rem + 0.25vw, 0.875rem);
+}
+
+.ticket-card .ticket-left .ticket-link:hover {
+    text-decoration: underline;
+}
+
+.ticket-card .ticket-right {
+    padding: 30px;
+    text-align: center;
+}
+
+.ticket-right .tick-para {
+    color: #253b56;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.ticket-right .tick-price {
+    color: #253b56;
+    font-weight: 600;
+    padding: 15px 0;
+    font-size: clamp(1.2rem, 0.7031rem + 0.75vw, 1.5rem);
+}
+
+.ticket-right .tick-price span {
+    font-weight: 300;
+    font-size: clamp(1.2rem, 0.7031rem + 0.75vw, 1.5rem);
+}
+
+.ticket-right .tick-button {
+    margin-top: 18px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 12px 32px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    background-color: #1994d7;
+}
+
+.ticket-right .tick-button:hover {
+    background-color: #0069a2;
+}
+
+@media screen and (max-width: 425px) {
+    .hero-banner-main {
+        height: 40vh;
+    }
+
+    .hero-inner {
+        padding: 60px 20px;
+    }
+
+    .ticket-section-main {
+        padding: 0px 20px;
+        margin: 20px 0;
+    }
+
+    .ticket-card-main {
+        padding: 30px 20px;
+    }
+
+    .ticket-card {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .ticket-card-main .ticket-left {
+        padding: 0px;
+        border: none;
+    }
+
+    .ticket-card .ticket-right {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0px;
+        text-align: left;
+    }
+}
+/* end of code applicable to tickets webpage */
+
