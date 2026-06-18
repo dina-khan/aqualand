@@ -6,7 +6,7 @@
 ---
 🌊 **[Open Website](https://dina-khan.github.io/aqualand/)**
 
-📄 **[View Full Project Report](docs/report.pdf)**
+📄 **[Report](docs/report.pdf)**
 
 ---
 
